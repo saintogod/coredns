@@ -22,8 +22,8 @@ jobs:
     steps:
       - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
       - name: Build Docker Images
-        run: make VERSION=${RELEASE:1} DOCKER=coredns -f Makefile.docker release
+        run: make VERSION=${RELEASE:1} DOCKER=saintogod -f Makefile.docker release
       - name: Show Docker Images
         run: docker images
       - name: Publish Docker Images
-        run: make VERSION=${RELEASE:1} DOCKER=coredns -f Makefile.docker docker-push
+        run: make VERSION=${RELEASE:1} DOCKER=saintogod -f Makefile.docker docker-push
